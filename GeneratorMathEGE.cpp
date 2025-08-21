@@ -3695,9 +3695,9 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Отрезки $AC$ и $BD$ -- диаметры окружности с центром $O$. Угол $ACB$ равен $" << (360-alpha[1])/2 << "^{\\circ}$. Найдите величину угла $AOD$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Отрезки $AC$ и $BD$ -- диаметры окружности с центром $O$. Угол $ACB$ равен $" << (360-alpha[1])/2 << "^{\\circ}$. Найдите величину угла $AOD$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate[label=below left:$O$] (O) at (0,0);" << endl
                     << "            \\coordinate[label=below:$A$] (A) at (" << alpha[1] << ":1.5);" << endl
@@ -3705,9 +3705,9 @@ string Okrugn(int i)
                     << "            \\coordinate[label=above:$C$] (C) at (" << alpha[0] << ":1.5);" << endl
                     << "            \\coordinate[label=left:$D$] (D) at (180:1.5);" << endl
                     << "            \\draw[thick] (A) -- (C) -- (B) -- (D);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -3720,9 +3720,9 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Отрезки $AC$ и $BD$ -- диаметры окружности с центром $O$. Угол $AOD$ равен $" << alpha[1]-180 << "^{\\circ}$. Найдите величину угла $ACB$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Отрезки $AC$ и $BD$ -- диаметры окружности с центром $O$. Угол $AOD$ равен $" << alpha[1]-180 << "^{\\circ}$. Найдите величину угла $ACB$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate[label=below left:$O$] (O) at (0,0);" << endl
                     << "            \\coordinate[label=below:$A$] (A) at (" << alpha[1] << ":1.5);" << endl
@@ -3730,9 +3730,9 @@ string Okrugn(int i)
                     << "            \\coordinate[label=above:$C$] (C) at (" << alpha[0] << ":1.5);" << endl
                     << "            \\coordinate[label=left:$D$] (D) at (180:1.5);" << endl
                     << "            \\draw[thick] (A) -- (C) -- (B) -- (D);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -3747,9 +3747,9 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Найдите величину угла $ACO$, если его сторона $CA$ касается окружности с центром в точке $O$, отрезок $CO$ пересекает окружность в точке $B$, а дуга $AB$ окружности, заключенная внутри этого угла, равна $" << alpha[1]-alpha[0] <<"^{\\circ}$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Найдите величину угла $ACO$, если его сторона $CA$ касается окружности с центром в точке $O$, отрезок $CO$ пересекает окружность в точке $B$, а дуга $AB$ окружности, заключенная внутри этого угла, равна $" << alpha[1]-alpha[0] <<"^{\\circ}$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate[label=below left:$O$] (O) at (0,0);" << endl
                     << "            \\coordinate[label=above:$A$] (A) at (" << alpha[1] << ":1.5);" << endl
@@ -3757,9 +3757,9 @@ string Okrugn(int i)
                     << "            \\coordinate[label=above:$C$] (C) at (" << alpha[0] << ":" << 1.5/cos((alpha[1]-alpha[0]) * PI / 180) << ");" << endl
                     << "            \\coordinate (E) at (" << alpha[1] + 30 << ":" << 1.5/cos(30*PI/180) << ");" << endl
                     << "            \\draw[thick] (E) -- (C) -- (O) -- (A);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -3774,9 +3774,9 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Угол $ACO$ равен $" << 90 - alpha[1] +alpha[0] << "^{\\circ}$. Его сторона $AC$ касается окружности с центром в точке $O$. Отрезок $CO$ пересекает окружность в точке $B$. Найдите градусную меру дуги $AB$ окружности, заключенной внутри этого угла. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Угол $ACO$ равен $" << 90 - alpha[1] +alpha[0] << "^{\\circ}$. Его сторона $AC$ касается окружности с центром в точке $O$. Отрезок $CO$ пересекает окружность в точке $B$. Найдите градусную меру дуги $AB$ окружности, заключенной внутри этого угла. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate[label=below left:$O$] (O) at (0,0);" << endl
                     << "            \\coordinate[label=above:$A$] (A) at (" << alpha[1] << ":1.5);" << endl
@@ -3784,9 +3784,9 @@ string Okrugn(int i)
                     << "            \\coordinate[label=above:$C$] (C) at (" << alpha[0] << ":" << 1.5 / cos((alpha[1] - alpha[0]) * PI / 180) << ");" << endl
                     << "            \\coordinate (E) at (" << alpha[1] + 30 << ":" << 1.5 / cos(30 * PI / 180) << ");" << endl
                     << "            \\draw[thick] (E) -- (C) -- (O) -- (A);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -3800,18 +3800,18 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Найдите центральный угол, если он на $" << answer/2 << "^{\\circ}$ больше острого вписанного угла, опирающегося на ту же дугу. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Найдите центральный угол, если он на $" << answer/2 << "^{\\circ}$ больше острого вписанного угла, опирающегося на ту же дугу. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate (O) at (0,0);" << endl
                     << "            \\coordinate (A) at (" << alpha[0] << ":1.5);" << endl
                     << "            \\coordinate (B) at (" << alpha[1] << ":1.5);" << endl
                     << "            \\coordinate (C) at (" << alpha[2] << ":1.5);" << endl
                     << "            \\draw[thick] (B) -- (A) -- (C) -- (O) -- (B);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -3828,18 +3828,18 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << (i + 1) << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $BAD$ равен $" << betta[0] << "^{\\circ}$. Найдите угол $BCD$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $BAD$ равен $" << betta[0] << "^{\\circ}$. Найдите угол $BCD$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate[label=right:$C$] (C) at (0:1.5);" << endl
                     << "            \\coordinate[label=above left:$B$] (B) at (" << alpha[0] << ":1.5);" << endl
                     << "            \\coordinate[label=above left:$A$] (A) at (" << alpha[0] + alpha[1] << ":1.5);" << endl
                     << "            \\coordinate[label=below left:$D$] (D) at (" << alpha[2] << ":1.5);" << endl
                     << "            \\draw[thick] (A) -- (B) -- (C) -- (D) -- (A);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -3882,18 +3882,18 @@ string Okrugn(int i)
                     answer = betta[1];
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $ABD$ равен $" << (alpha[3] - alpha[2]) / 2 << "^{\\circ}$, угол $CAD$ равен $" << (360 - alpha[3] + alpha[0]) / 2 << "^{\\circ}$. Найдите угол $ABC$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $ABD$ равен $" << (alpha[3] - alpha[2]) / 2 << "^{\\circ}$, угол $CAD$ равен $" << (360 - alpha[3] + alpha[0]) / 2 << "^{\\circ}$. Найдите угол $ABC$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(" << R << ");" << endl
                     << "            \\coordinate[label=below left:$A$] (A) at (" << alpha[2] << ":" << R << ");" << endl
                     << "            \\coordinate[label=above left:$B$] (B) at (" << alpha[1] << ":" << R << ");" << endl
                     << "            \\coordinate[label=above right:$C$] (C) at (" << alpha[0] << ":" << R << ");" << endl
                     << "            \\coordinate[label=below right:$D$] (D) at (" << alpha[3] << ":" << R << ");" << endl
                     << "            \\draw[thick] (A) -- (B) -- (C) -- (D) -- (A) -- (C) -- (B) -- (D);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:
@@ -3936,18 +3936,18 @@ string Okrugn(int i)
                     answer = (alpha[3] - alpha[2]) / 2;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $ABC$ равен $" << (360 - alpha[2] + alpha[0]) / 2 << "^{\\circ}$, угол $CAD$ равен $" << (360 - alpha[3] + alpha[0]) / 2 << "^{\\circ}$. Найдите угол $ABD$. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Четырехугольник $ABCD$ вписан в окружность. Угол $ABC$ равен $" << (360 - alpha[2] + alpha[0]) / 2 << "^{\\circ}$, угол $CAD$ равен $" << (360 - alpha[3] + alpha[0]) / 2 << "^{\\circ}$. Найдите угол $ABD$. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(" << R << ");" << endl
                     << "            \\coordinate[label=below left:$A$] (A) at (" << alpha[2] << ":" << R << ");" << endl
                     << "            \\coordinate[label=above left:$B$] (B) at (" << alpha[1] << ":" << R << ");" << endl
                     << "            \\coordinate[label=above right:$C$] (C) at (" << alpha[0] << ":" << R << ");" << endl
                     << "            \\coordinate[label=below right:$D$] (D) at (" << alpha[3] << ":" << R << ");" << endl
                     << "            \\draw[thick] (A) -- (B) -- (C) -- (D) -- (A) -- (C) -- (B) -- (D);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 9:
@@ -3969,18 +3969,18 @@ string Okrugn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Два угла вписанного в окружность четырехугольника равны $" << betta[0] << "^{\\circ}$ и $" << betta[1] << "^{\\circ}$. Найдите больший из оставшихся углов. Ответ дайте в градусах. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Два угла вписанного в окружность четырехугольника равны $" << betta[0] << "^{\\circ}$ и $" << betta[1] << "^{\\circ}$. Найдите больший из оставшихся углов. Ответ дайте в градусах." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick] (0,0) circle(1.5);" << endl
                     << "            \\coordinate (A) at (" << alpha[0] << ":1.5);" <<  endl
                     << "            \\coordinate (B) at (" << alpha[1] << ":1.5);" << endl
                     << "            \\coordinate (C) at (" << alpha[2] << ":1.5);" << endl
                     << "            \\coordinate (D) at (" << alpha[3] << ":1.5);" << endl
                     << "            \\draw[thick] (A) -- (B) -- (C) -- (D) -- (A);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 10:
@@ -4026,44 +4026,44 @@ string Okrugn(int i)
                 if ((type_1 == 1) || (type_1 == 6))
                 {
                     cout << "%" << i + 1 << endl;
-                    cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности. &" << endl;
-                    cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности." << endl;
+                    cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                         << "            \\draw[thick] (0,0) circle(1.5);" << endl
                         << "            \\coordinate[label=above:$B$] (A) at (" << alpha[0] << ":1.5);" << endl
                         << "            \\coordinate[label=above:$C$] (B) at (" << alpha[1] << ":1.5);" << endl
                         << "            \\coordinate[label=below:$A$] (C) at (" << alpha[2] << ":1.5);" << endl
                         << "            \\draw[thick] (A) -- (B) -- (C) -- (A);" << endl;
-                    cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                    cout << "\\end{tikzpicture}" << endl << endl;
                 }
                 if ((type_1 == 2) || (type_1 == 5))
                 {
                     cout << "%" << i + 1 << endl;
-                    cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "\\sqrt{2}$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности. &" << endl;
-                    cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "\\sqrt{2}$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности." << endl;
+                    cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                         << "            \\draw[thick] (0,0) circle(1.5);" << endl
                         << "            \\coordinate[label=above:$B$] (A) at (" << alpha[0] << ":1.5);" << endl
                         << "            \\coordinate[label=above:$C$] (B) at (" << alpha[1] << ":1.5);" << endl
                         << "            \\coordinate[label=below:$A$] (C) at (" << alpha[2] << ":1.5);" << endl
                         << "            \\draw[thick] (A) -- (B) -- (C) -- (A);" << endl;
-                    cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                    cout << "\\end{tikzpicture}" << endl << endl;
                 }
                 if ((type_1 == 3) || (type_1 == 4))
                 {
                     cout << "%" << i + 1 << endl;
-                    cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "\\sqrt{3}$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности. &" << endl;
-                    cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                    cout << "        В треугольнике $ABC$ сторона $AB$ равна $" << R << "\\sqrt{3}$, угол $C$ равен $" << betta[0] << "^{\\circ}$. Найдите радиус описанной около этого треугольнкиа окружности." << endl;
+                    cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                         << "            \\draw[thick] (0,0) circle(1.5);" << endl
                         << "            \\coordinate[label=above:$B$] (A) at (" << alpha[0] << ":1.5);" << endl
                         << "            \\coordinate[label=above:$C$] (B) at (" << alpha[1] << ":1.5);" << endl
                         << "            \\coordinate[label=below:$A$] (C) at (" << alpha[2] << ":1.5);" << endl
                         << "            \\draw[thick] (A) -- (B) -- (C) -- (A);" << endl;
-                    cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                    cout << "\\end{tikzpicture}" << endl << endl;
                 }
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
@@ -4121,9 +4121,9 @@ string Vector(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        На координатной плоскости изображены векторы $\\vec{a}$ и $\\vec{b}$, координатами которых являются целые числа. Найдите длину вектора $" << SIGNUr(k[0],1) << NumberCelUr(k[0],1) << "\\vec{a}" << SIGNUr(k[1],2) << NumberCelUr(k[1],1) << "\\vec{b}$. & " << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl << "\\pgfplotsset{compat=1.18,  width = 6cm % ширина графика%" << endl <<"}" << endl <<  "\\begin{axis}[xmin = -1.5, xmax = 6.5," << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        На координатной плоскости изображены векторы $\\vec{a}$ и $\\vec{b}$, координатами которых являются целые числа. Найдите длину вектора $" << SIGNUr(k[0],1) << NumberCelUr(k[0],1) << "\\vec{a}" << SIGNUr(k[1],2) << NumberCelUr(k[1],1) << "\\vec{b}$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl << "\\pgfplotsset{compat=1.18,  width = 6cm % ширина графика%" << endl <<"}" << endl <<  "\\begin{axis}[xmin = -1.5, xmax = 6.5," << endl
                     << "ymin = -1.5, ymax = 6.5," << endl
                     << "axis lines = middle," << endl
                     << "xtick = {-1, 0, 1, 2, 3, 4, 5, 6}, % задает иксы которые будут отмечены" << endl
@@ -4140,9 +4140,9 @@ string Vector(int i)
                 cout << "\\draw[thick, -latex] (" << b[0] << "," << b[1] << ") -- (" << (b[0] + b[2]) << "," << (b[1] + b[3]) << ");" << endl;
                 cout << "\\coordinate[label=above:$a$] (a) at (" << (a[0]+a[0]+a[2])/2 << "," << (a[1]+a[1]+a[3])/2 << ");" << endl;
                 cout << "\\coordinate[label=above:$b$] (b) at (" << (b[0] + b[0] + b[2]) / 2 << "," << (b[1] + b[1] + b[3]) / 2 << ");" << endl;
-                cout << "        \\end{axis}" << endl << "\\end{tikzpicture}" << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{axis}" << endl << "\\end{tikzpicture}" << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -4187,9 +4187,9 @@ string Vector(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        На координатной плоскости изображены векторы $\\vec{a}$ и $\\vec{b}$, координатами которых являются целые числа. Найдите скалярное произведение $\\vec{a}\\cdot\\vec{b}$. & " << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl << "\\pgfplotsset{compat=1.18,  width = 6cm % ширина графика%" << endl << "}" << endl << "\\begin{axis}[xmin = -1.5, xmax = 6.5," << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        На координатной плоскости изображены векторы $\\vec{a}$ и $\\vec{b}$, координатами которых являются целые числа. Найдите скалярное произведение $\\vec{a}\\cdot\\vec{b}$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl << "\\pgfplotsset{compat=1.18,  width = 6cm % ширина графика%" << endl << "}" << endl << "\\begin{axis}[xmin = -1.5, xmax = 6.5," << endl
                     << "ymin = -1.5, ymax = 6.5," << endl
                     << "axis lines = middle," << endl
                     << "xtick = {-1, 0, 1, 2, 3, 4, 5, 6}, % задает иксы которые будут отмечены" << endl
@@ -4206,9 +4206,9 @@ string Vector(int i)
                 cout << "\\draw[thick, -latex] (" << b[0] << "," << b[1] << ") -- (" << (b[0] + b[2]) << "," << (b[1] + b[3]) << ");" << endl;
                 cout << "\\coordinate[label=above:$a$] (a) at (" << (a[0] + a[0] + a[2]) / 2 << "," << (a[1] + a[1] + a[3]) / 2 << ");" << endl;
                 cout << "\\coordinate[label=above:$b$] (b) at (" << (b[0] + b[0] + b[2]) / 2 << "," << (b[1] + b[1] + b[3]) / 2 << ");" << endl;
-                cout << "        \\end{axis}" << endl << "\\end{tikzpicture}" << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{axis}" << endl << "\\end{tikzpicture}" << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -4251,7 +4251,7 @@ string Vector(int i)
                 cout << "%" << i + 1 << endl;
                 cout << "\\item Даны векторы $\\vec{a}(" << a[2] << "," << a[3] << ")$ и $\\vec{b}(" << b[2] << "," << b[3] << ")$. Найдите длину вектора $" << SIGNUr(k[0], 1) << NumberCelUr(k[0], 1) << "\\vec{a}" << SIGNUr(k[1], 2) << NumberCelUr(k[1], 1) << "\\vec{b}$." << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -4290,7 +4290,7 @@ string Vector(int i)
                 cout << "%" << i + 1 << endl;
                 cout << "\\item Даны векторы $\\vec{a}(" << a[2] << "," << a[3] << ")$ и $\\vec{b}(" << b[2] << "," << b[3] << ")$. Найдите скалярное произведение $\\vec{a}\\cdot\\vec{b}$." << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -4318,7 +4318,7 @@ string Vector(int i)
                 cout << "%" << i + 1 << endl;
                 cout << "\\item Длины векторов $\\vec{a}$ и $\\vec{b}$ равны $" << a[0] << "$ и $" << b[0] << "$, а угол между ними равен $" << c[0] << "^{\\circ}$. Найдите скалярное произведение $\\vec{a}\\cdot\\vec{b}$." << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
@@ -4355,9 +4355,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCA_1B_1C_1$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCA_1B_1C_1$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\def\\x{" << a[0]/k << "}" << endl
                     << "            \\def\\y{" << a[2]/k << "}" << endl
                     << "            \\def\\z{" << a[1]/k << "}" << endl
@@ -4371,9 +4371,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=above:${B_1}$] (B_1) at (\\x,\\y,\\z);" << endl
                     << "            \\draw[thick] (B) -- (A) -- (A_1) -- (B_1) -- (B) -- (C) -- (C_1) -- (B_1) -- (C_1) -- (D_1) -- (A_1);" << endl
                     << "            \\draw[thick,  dashed] (A) -- (D) -- (C) -- (D) -- (D_1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -4398,9 +4398,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCDD_1$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCDD_1$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\def\\x{" << a[0] / k << "}" << endl
                     << "            \\def\\y{" << a[2] / k << "}" << endl
                     << "            \\def\\z{" << a[1] / k << "}" << endl
@@ -4414,9 +4414,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=above:${B_1}$] (B_1) at (\\x,\\y,\\z);" << endl
                     << "            \\draw[thick] (B) -- (A) -- (A_1) -- (B_1) -- (B) -- (C) -- (C_1) -- (B_1) -- (C_1) -- (D_1) -- (A_1);" << endl
                     << "            \\draw[thick,  dashed] (A) -- (D) -- (C) -- (D) -- (D_1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -4441,9 +4441,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCB_1$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCB_1$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\def\\x{" << a[0] / k << "}" << endl
                     << "            \\def\\y{" << a[2] / k << "}" << endl
                     << "            \\def\\z{" << a[1] / k << "}" << endl
@@ -4457,9 +4457,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=above:${B_1}$] (B_1) at (\\x,\\y,\\z);" << endl
                     << "            \\draw[thick] (B) -- (A) -- (A_1) -- (B_1) -- (B) -- (C) -- (C_1) -- (B_1) -- (C_1) -- (D_1) -- (A_1);" << endl
                     << "            \\draw[thick,  dashed] (A) -- (D) -- (C) -- (D) -- (D_1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -4484,9 +4484,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCDA_1B_1$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        В прямоугольном параллелепипеде $ABCDA_1B_1C_1D_1$ известно, что $AB=" << a[0] << "$, $BC=" << a[1] << "$, $AA_1=" << a[2] << "$. Найдите объем многогранника, вершинами которого являются точки $ABCDA_1B_1$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\def\\x{" << a[0] / k << "}" << endl
                     << "            \\def\\y{" << a[2] / k << "}" << endl
                     << "            \\def\\z{" << a[1] / k << "}" << endl
@@ -4500,9 +4500,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=above:${B_1}$] (B_1) at (\\x,\\y,\\z);" << endl
                     << "            \\draw[thick] (B) -- (A) -- (A_1) -- (B_1) -- (B) -- (C) -- (C_1) -- (B_1) -- (C_1) -- (D_1) -- (A_1);" << endl
                     << "            \\draw[thick,  dashed] (A) -- (D) -- (C) -- (D) -- (D_1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -4519,9 +4519,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Объем куба равен $" << S << "$. Найдите объем треугольной призмы,отсекаемой от куба плоскостью, проходящей через середины двух рёбер, выходящих из одной вершины, и параллельной третьему ребру,выходящему из этой же вершины. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Объем куба равен $" << S << "$. Найдите объем треугольной призмы,отсекаемой от куба плоскостью, проходящей через середины двух рёбер, выходящих из одной вершины, и параллельной третьему ребру,выходящему из этой же вершины." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\def\\x{" << a[0] / k << "}" << endl
                     << "            \\def\\y{" << a[2] / k << "}" << endl
                     << "            \\def\\z{" << a[1] / k << "}" << endl
@@ -4541,9 +4541,9 @@ string Prizm(int i)
                     << "            \\draw[dashed] (A) -- (D) -- (C) -- (D) -- (D_1);" << endl
                     << "            \\draw[thick, dashed] (Q) -- (Q_1) -- (C_1) -- (C) -- (Q) -- (W);" << endl
                     << "            \\draw[thick] (W) -- (W_1) -- (C_1) -- (C) -- (W) -- (W_1) -- (Q_1) -- (C_1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -4556,9 +4556,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Найдите объем многогранника, вершинами которого являются вершины $A$, $B$, $C$, $B_1$, правильно треугольной призмы $ABCA_1B_1C_1$, площадь основания которой равна $" << S << "$, а боковое ребро равно $"<< a[0] << "$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Найдите объем многогранника, вершинами которого являются вершины $A$, $B$, $C$, $B_1$, правильно треугольной призмы $ABCA_1B_1C_1$, площадь основания которой равна $" << S << "$, а боковое ребро равно $"<< a[0] << "$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\coordinate[label=below right:${A}$] (A) at (0.5,0,2);" << endl
                     << "            \\coordinate[label=below right:${A_1}$] (A_1) at (0.5,2,2);" << endl
                     << "            \\coordinate[label=below left:${C}$] (C) at (-1,0,0);" << endl
@@ -4567,9 +4567,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=below right:${B_1}$] (B_1) at (1,2,0);" << endl
                     << "            \\draw[thick] (C_1) -- (C) -- (A) -- (A_1) -- (C_1) -- (B_1) -- (A_1) -- (A) -- (B) -- (B_1);" << endl
                     << "            \\draw[thick,  dashed] (C) -- (B);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -4582,9 +4582,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Найдите объем многогранника, вершинами которого являются вершины $A$, $C$, $A_1$, $B_1$, $C_1$ правильно треугольной призмы $ABCA_1B_1C_1$, площадь основания которой равна $" << S << "$, а боковое ребро равно $" << a[0] << "$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Найдите объем многогранника, вершинами которого являются вершины $A$, $C$, $A_1$, $B_1$, $C_1$ правильно треугольной призмы $ABCA_1B_1C_1$, площадь основания которой равна $" << S << "$, а боковое ребро равно $" << a[0] << "$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\coordinate[label=below right:${A}$] (A) at (0.5,0,2);" << endl
                     << "            \\coordinate[label=below right:${A_1}$] (A_1) at (0.5,2,2);" << endl
                     << "            \\coordinate[label=below left:${C}$] (C) at (-1,0,0);" << endl
@@ -4593,9 +4593,9 @@ string Prizm(int i)
                     << "            \\coordinate[label=below right:${B_1}$] (B_1) at (1,2,0);" << endl
                     << "            \\draw[thick] (C_1) -- (C) -- (A) -- (A_1) -- (C_1) -- (B_1) -- (A_1) -- (A) -- (B) -- (B_1);" << endl
                     << "            \\draw[thick,  dashed] (C) -- (B);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:
@@ -4608,9 +4608,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Через среднюю линию основания треугольной призмы, объём которой равен $" << V << "$, проведена плоскость, параллельная боковому ребру. Найдите объём отсеченной треугольной призмы. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Через среднюю линию основания треугольной призмы, объём которой равен $" << V << "$, проведена плоскость, параллельная боковому ребру. Найдите объём отсеченной треугольной призмы." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\coordinate (A) at (0.5,0,2);" << endl
                     << "            \\coordinate (A_1) at (0.5,2,2);" << endl
                     << "            \\coordinate (C) at (-1,0,0);" << endl
@@ -4626,9 +4626,9 @@ string Prizm(int i)
                     << "            \\draw[thick] (B_1) -- (W_1) -- (Q_1) -- (B_1) -- (B) -- (Q) -- (Q_1);" << endl
                     << "            \\draw[thick, dashed] (Q) -- (W) -- (W_1);" << endl
                     << "            \\draw[thick, dashed] (W) -- (B);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 9:
@@ -4641,9 +4641,9 @@ string Prizm(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Площадь боковой поверхности треугольной призмы равна $" << V << "$. Через среднюю линию основания треугольной призмы, проведена плоскость, параллельная боковому ребру. Найдите площадь боковой поверхности отсеченной треугольной призмы. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Площадь боковой поверхности треугольной призмы равна $" << V << "$. Через среднюю линию основания треугольной призмы, проведена плоскость, параллельная боковому ребру. Найдите площадь боковой поверхности отсеченной треугольной призмы." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\coordinate (A) at (0.5,0,2);" << endl
                     << "            \\coordinate (A_1) at (0.5,2,2);" << endl
                     << "            \\coordinate (C) at (-1,0,0);" << endl
@@ -4659,9 +4659,9 @@ string Prizm(int i)
                     << "            \\draw[thick] (B_1) -- (W_1) -- (Q_1) -- (B_1) -- (B) -- (Q) -- (Q_1);" << endl
                     << "            \\draw[thick, dashed] (Q) -- (W) -- (W_1);" << endl
                     << "            \\draw[thick, dashed] (W) -- (B);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
@@ -4684,12 +4684,12 @@ string Cilindr(int i)
                 else
                     answer = 2 * S;
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
-                    cout << "        Цилиндр и конус имеют общее основание и высоту. Высота цилиндра равна радиусу основания. Площадь боковой поверхности цилиндра равна $" << S << "\\sqrt{2}$. Найдите площадь боковой поверхности конуса. &" << endl;
+                    cout << "        Цилиндр и конус имеют общее основание и высоту. Высота цилиндра равна радиусу основания. Площадь боковой поверхности цилиндра равна $" << S << "\\sqrt{2}$. Найдите площадь боковой поверхности конуса." << endl;
                 else
-                    cout << "        Цилиндр и конус имеют общее основание и высоту. Высота цилиндра равна радиусу основания. Площадь боковой поверхности конуса равна $" << S << "\\sqrt{2}$. Найдите площадь боковой поверхности цилиндра. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Цилиндр и конус имеют общее основание и высоту. Высота цилиндра равна радиусу основания. Площадь боковой поверхности конуса равна $" << S << "\\sqrt{2}$. Найдите площадь боковой поверхности цилиндра." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick, dashed] (1.5,0)  arc (0:180:1.5 and 0.5);" << endl
                     << "            \\draw[thick] (1.5,0)  arc (0:-180:1.5 and 0.5);;" << endl
                     << "            \\draw (1.5,2)  arc (0:180:1.5 and 0.5);" << endl
@@ -4698,9 +4698,9 @@ string Cilindr(int i)
                     << "            \\draw (1.5,0) -- (1.5,2);" << endl
                     << "            \\draw[dashed] (0,2) -- (0,0) -- (1.5,0);" << endl
                     << "            \\draw[thick] (-1.5,0) -- (0,2) -- (1.5,0);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:     // Объемы цилиндра и конуса випаснных
@@ -4716,12 +4716,12 @@ string Cilindr(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
-                    cout << "        Цилиндр и конус имеют общее основание и высоту. Объём цилиндра равен $" << V << "$. Найдите объем конуса. &" << endl;
+                    cout << "        Цилиндр и конус имеют общее основание и высоту. Объём цилиндра равен $" << V << "$. Найдите объем конуса." << endl;
                 else
-                    cout << "        Цилиндр и конус имеют общее основание и высоту. Объём конуса равен $" << V << "$. Найдите объем цилиндра. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Цилиндр и конус имеют общее основание и высоту. Объём конуса равен $" << V << "$. Найдите объем цилиндра." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick, dashed] (1,0)  arc (0:180:1 and 0.3);" << endl
                     << "            \\draw[thick] (1,0)  arc (0:-180:1 and 0.3);" << endl
                     << "            \\draw (1,2)  arc (0:180:1 and 0.3);" << endl
@@ -4730,9 +4730,9 @@ string Cilindr(int i)
                     << "            \\draw (1,0) -- (1,2);" << endl
                     << "            \\draw[dashed] (0,2) -- (0,0) -- (1,0);" << endl
                     << "            \\draw[thick] (-1,0) -- (0,2) -- (1,0);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:     // Изменение объема конуса при изменении высоты и радиуса
@@ -4743,19 +4743,19 @@ string Cilindr(int i)
                 else
                     answer = S * S;
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
-                    cout << "        Во сколько раз уменьшится объем конуса, если его высота уменьшится в $" << S << "$ раз, а радиус основания останется прежним? &" << endl;
+                    cout << "        Во сколько раз уменьшится объем конуса, если его высота уменьшится в $" << S << "$ раз, а радиус основания останется прежним?" << endl;
                 else
-                    cout << "        Во сколько раз уменьшится объем конуса, если радиус основания уменьшится в $" << S << "$ раз, а высота останется прежней? &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Во сколько раз уменьшится объем конуса, если радиус основания уменьшится в $" << S << "$ раз, а высота останется прежней?" << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick, dashed] (1,0)  arc (0:180:1 and 0.3);" << endl
                     << "            \\draw[thick] (1,0)  arc (0:-180:1 and 0.3);" << endl
                     << "            \\draw[dashed] (0,2) -- (0,0) -- (1,0);" << endl
                     << "            \\draw[thick] (-1,0) -- (0,2) -- (1,0);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:     // Объем шара и конуса вписанных
@@ -4771,20 +4771,20 @@ string Cilindr(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
-                    cout << "        Конус вписан в шар. Радиус основания конуса равен радиусу шара. Объем шара равен $" << V << "$. Найдите объём конуса. &" << endl;
+                    cout << "        Конус вписан в шар. Радиус основания конуса равен радиусу шара. Объем шара равен $" << V << "$. Найдите объём конуса." << endl;
                 else
-                    cout << "        Конус вписан в шар. Радиус основания конуса равен радиусу шара. Объем конуса равен $" << V << "$. Найдите объём шара. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Конус вписан в шар. Радиус основания конуса равен радиусу шара. Объем конуса равен $" << V << "$. Найдите объём шара." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick, dashed] (1,0)  arc (0:180:1 and 0.3);" << endl
                     << "            \\draw[thick] (1,0)  arc (0:-180:1 and 0.3);" << endl
                     << "            \\draw[dashed] (0,0) -- (1,0);" << endl
                     << "            \\draw[thick] (-1,0) -- (0,1) -- (1,0);" << endl
                     << "            \\draw (0,0) circle(1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:     // Объемы цилиндров при изменении радиусов и высоты
@@ -4798,9 +4798,9 @@ string Cilindr(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
-                cout << "        Дано два цилиндра. Объём первого цилиндра равен $" << V << "$. У второго цилиндра высота в $" << k[0] << "$ раза меньше, а радиус основания в $" << k[1] << "$ раза больше, чем у первого. Найдите объем второго цилиндра. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        Дано два цилиндра. Объём первого цилиндра равен $" << V << "$. У второго цилиндра высота в $" << k[0] << "$ раза меньше, а радиус основания в $" << k[1] << "$ раза больше, чем у первого. Найдите объем второго цилиндра." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[thick, dashed] (0.7,0)  arc (0:180:0.7 and 0.2);" << endl
                     << "            \\draw[thick] (0.7,0)  arc (0:-180:0.7 and 0.2);" << endl
                     << "            \\draw[thick] (0.7,2)  arc (0:180:0.7 and 0.2);" << endl
@@ -4813,9 +4813,9 @@ string Cilindr(int i)
                     << "            \\draw[thick] (4,1)  arc (0:-180:1.5 and 0.4);" << endl
                     << "            \\draw[thick] (4,0) -- (4,1);" << endl
                     << "            \\draw[thick] (1,0) -- (1,1);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:     // Шар в цилиндре объем
@@ -4831,12 +4831,12 @@ string Cilindr(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if(type_1==1)
-                    cout << "        Шар, объём которого равен $" << V << "$, вписан в цилиндр. Найдите объём цилиндра. &" << endl;
+                    cout << "        Шар, объём которого равен $" << V << "$, вписан в цилиндр. Найдите объём цилиндра." << endl;
                 else
-                    cout << "        Шар вписан в цилиндр, объём которого равен $" << V << "$. Найдите объём шара. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Шар вписан в цилиндр, объём которого равен $" << V << "$. Найдите объём шара." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[dashed] (1,0)  arc (0:180:1 and 0.3);" << endl
                     << "            \\draw (1,0)  arc (0:-180:1 and 0.3);" << endl
                     << "            \\draw[dashed] (1,1)  arc (0:180:1 and 0.3);" << endl
@@ -4847,9 +4847,9 @@ string Cilindr(int i)
                     << "            \\draw (-1,0) -- (-1,2);" << endl
                     << "            \\draw[thick] (0,1) circle(1);" << endl
                     << "            \\draw[fill=black] (0,1) circle(1pt);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:     // Шар в цилиндре площадь
@@ -4865,12 +4865,12 @@ string Cilindr(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{10cm} m{3cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
-                    cout << "        Шар, площадь поверхности которого равна $" << V << "$, вписан в цилиндр. Найдите площадь полной поверхности цилиндра. &" << endl;
+                    cout << "        Шар, площадь поверхности которого равна $" << V << "$, вписан в цилиндр. Найдите площадь полной поверхности цилиндра." << endl;
                 else
-                    cout << "        Шар вписан в цилиндр, площадь полной поверхности которого равна $" << V << "$. Найдите площадь поверхности шара. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        Шар вписан в цилиндр, площадь полной поверхности которого равна $" << V << "$. Найдите площадь поверхности шара." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "            \\draw[dashed] (1,0)  arc (0:180:1 and 0.3);" << endl
                     << "            \\draw (1,0)  arc (0:-180:1 and 0.3);" << endl
                     << "            \\draw[dashed] (1,1)  arc (0:180:1 and 0.3);" << endl
@@ -4881,9 +4881,9 @@ string Cilindr(int i)
                     << "            \\draw (-1,0) -- (-1,2);" << endl
                     << "            \\draw[thick] (0,1) circle(1);" << endl
                     << "            \\draw[fill=black] (0,1) circle(1pt);" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{tikzpicture}" << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
@@ -4916,18 +4916,18 @@ string Graphics(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=kx+b$. Найдите значение $f(" << x << ")$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=kx+b$. Найдите значение $f(" << x << ")$." << endl;
                     answer = y;
                 }
                 else
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=kx+b$.  Найдите значение $x$ при котором  $f(x)=" << y << "$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=kx+b$.  Найдите значение $x$ при котором  $f(x)=" << y << "$." << endl;
                     answer = x;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -4941,9 +4941,9 @@ string Graphics(int i)
                     << "\\coordinate[label=below left:${0}$] (O) at (0,0);" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << k << "*x" << SIGNUr(b,2) << NumberCelUr(b,2) << "};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -4983,18 +4983,18 @@ string Graphics(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображены графики двух линейных функций, пересекающиеся в точке $A$. Найдите абсциссу точки $A$.  &" << endl;
+                    cout << "        На рисунке изображены графики двух линейных функций, пересекающиеся в точке $A$. Найдите абсциссу точки $A$." << endl;
                     answer = x;
                 }
                 else
                 {
-                    cout << "        На рисунке изображены графики двух линейных функций, пересекающиеся в точке $A$. Найдите ординату точки $A$.  &" << endl;
+                    cout << "        На рисунке изображены графики двух линейных функций, пересекающиеся в точке $A$. Найдите ординату точки $A$." << endl;
                     answer = y;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5009,9 +5009,9 @@ string Graphics(int i)
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << k << "*x" << SIGNUr(b, 2) << NumberCelUr(b, 2) << "};" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << k2 << "*x" << SIGNUr(b2, 2) << NumberCelUr(b2, 2) << "};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -5039,18 +5039,18 @@ string Graphics(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображены графики функций видов $f(x)=a\\sqrt{x}$ и $g(x)=kx$, пересикающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$.  &" << endl;
+                    cout << "        На рисунке изображены графики функций видов $f(x)=a\\sqrt{x}$ и $g(x)=kx$, пересикающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$." << endl;
                     answer = x;
                 }
                 else
                 {
-                    cout << "        На рисунке изображены графики функций видов $f(x)=a\\sqrt{x}$ и $g(x)=kx$, пересикающиеся в точках $A$ и $B$. Найдите ординату точки $B$.  &" << endl;
+                    cout << "        На рисунке изображены графики функций видов $f(x)=a\\sqrt{x}$ и $g(x)=kx$, пересикающиеся в точках $A$ и $B$. Найдите ординату точки $B$." << endl;
                     answer = y;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5066,9 +5066,9 @@ string Graphics(int i)
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << k << "*x};" << endl
                     << "\\addplot[domain=0:3.5,black, thick, samples=1000]{" << a <<  "*sqrt(x)};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -5100,7 +5100,7 @@ string Graphics(int i)
                     
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
                     cout << "        На рисунке изображён график функции вида $f(x)=ax^2+bx+c$. Найдите значение $f(" << x << ")$.  &" << endl;
@@ -5109,12 +5109,12 @@ string Graphics(int i)
                 else
                 {
                     if(pow(-1,rand())>0)
-                        cout << "        На рисунке изображён график функции вида $f(x)=ax^2+bx+c$.  Найдите наименьшее значение $x$ при котором  $f(x)=" << y << "$.  &" << endl;
+                        cout << "        На рисунке изображён график функции вида $f(x)=ax^2+bx+c$.  Найдите наименьшее значение $x$ при котором  $f(x)=" << y << "$." << endl;
                     else
-                        cout << "        На рисунке изображён график функции вида $f(x)=ax^2+bx+c$.  Найдите наибольшее значение $x$ при котором  $f(x)=" << y << "$.  &" << endl;
+                        cout << "        На рисунке изображён график функции вида $f(x)=ax^2+bx+c$.  Найдите наибольшее значение $x$ при котором  $f(x)=" << y << "$." << endl;
                     answer = x;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5128,9 +5128,9 @@ string Graphics(int i)
                     << "\\coordinate[label=below left:${0}$] (O) at (0,0);" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << a << "*x*x" << SIGNUr(b, 2) << NumberCelUr(b, 2) << "*x" << SIGNUr(c,2) << NumberCelUr(c,2) << "};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item Возможно ошибка в ответе: " + to_string(answer) + " \n";
+                Answer = "  \\item Возможно ошибка в ответе: " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -5145,9 +5145,9 @@ string Graphics(int i)
                     answer = y;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
-                cout << "        На рисунке изображён график функции вида $f(x)=\\frac{k}{x}$. Найдите значение $f(" << x << ")$.  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
+                cout << "        На рисунке изображён график функции вида $f(x)=\\frac{k}{x}$. Найдите значение $f(" << x << ")$." << endl;
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5162,9 +5162,9 @@ string Graphics(int i)
                     << "\\addplot[domain=-3.5:-0.1,black, thick, samples=1000]{" << k << "/x};" << endl
                     << "\\addplot[domain=0.1:3.5,black, thick, samples=1000]{" << k << "/x};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -5207,18 +5207,18 @@ string Graphics(int i)
 
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображёны графики функций видов $f(x)=ax^2+bx+c$ и $g(x)=kx$, пересекающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$.  &" << endl;
+                    cout << "        На рисунке изображёны графики функций видов $f(x)=ax^2+bx+c$ и $g(x)=kx$, пересекающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$." << endl;
                     answer = x;
                 }
                 else
                 {
-                    cout << "        На рисунке изображёны графики функций видов $f(x)=ax^2+bx+c$ и $g(x)=kx$, пересекающиеся в точках $A$ и $B$. Найдите ординату точки $B$.  &" << endl;
+                    cout << "        На рисунке изображёны графики функций видов $f(x)=ax^2+bx+c$ и $g(x)=kx$, пересекающиеся в точках $A$ и $B$. Найдите ординату точки $B$." << endl;
                     answer = y;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5234,9 +5234,9 @@ string Graphics(int i)
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << SIGNUr(a,1) << NumberCelUr(a,2) << "*x*x" << SIGNUr(b,2) << NumberCelUr(b,2) << "*x};" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << k << "*x};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -5286,18 +5286,18 @@ string Graphics(int i)
 
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображёны графики функций видов $f(x)=\\frac{k}{x}$ и $g(x)=ax+b$, пересекающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$.  &" << endl;
+                    cout << "        На рисунке изображёны графики функций видов $f(x)=\\frac{k}{x}$ и $g(x)=ax+b$, пересекающиеся в точках $A$ и $B$. Найдите абсциссу точки $B$." << endl;
                     answer = x;
                 }
                 else
                 {
-                    cout << "        На рисунке изображёны графики функций видов $f(x)=\\frac{k}{x}$ и $g(x)=ax+b$, пересекающиеся в точках $A$ и $B$. Найдите ординату точки $B$.  &" << endl;
+                    cout << "        На рисунке изображёны графики функций видов $f(x)=\\frac{k}{x}$ и $g(x)=ax+b$, пересекающиеся в точках $A$ и $B$. Найдите ординату точки $B$." << endl;
                     answer = y;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5314,9 +5314,9 @@ string Graphics(int i)
                     << "\\addplot[domain=0.1:3.5,black, thick, samples=1000]{" << SIGNUr(k, 1) << NumberCelUr(k, 2) << "/x};" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << a << "*x" << SIGNUr(b,2) << NumberCelUr(b,2) << "};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:
@@ -5334,18 +5334,18 @@ string Graphics(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=a^x$. Найдите значение $f(" << x << ")$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=a^x$. Найдите значение $f(" << x << ")$." << endl;
                     answer = y;
                 }
                 else
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=a^x$.  Найдите значение $x$ при котором  $f(x)=" << y << "$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=a^x$.  Найдите значение $x$ при котором  $f(x)=" << y << "$." << endl;
                     answer = x;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-3.5, xmax=3.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5359,9 +5359,9 @@ string Graphics(int i)
                     << "\\coordinate[label=below left:${0}$] (O) at (0,0);" << endl
                     << "\\addplot[domain=-3.5:3.5,black, thick, samples=1000]{" << a << "^x};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 9:
@@ -5379,18 +5379,18 @@ string Graphics(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{8cm} m{5cm}}" << endl;
+                cout << "\\item\n" << endl << "\\begin{geometrytask}" << endl;
                 if (type_1 == 1)
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=\\log_{a}(x)$. Найдите значение $f(" << x << ")$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=\\log_{a}(x)$. Найдите значение $f(" << x << ")$." << endl;
                     answer = y;
                 }
                 else
                 {
-                    cout << "        На рисунке изображён график функции вида $f(x)=\\log_{a}(x)$.  Найдите значение $x$ при котором  $f(x)=" << y << "$.  &" << endl;
+                    cout << "        На рисунке изображён график функции вида $f(x)=\\log_{a}(x)$.  Найдите значение $x$ при котором  $f(x)=" << y << "$." << endl;
                     answer = x;
                 }
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\end{geometrytask}\\hfill" << endl << "\\begin{tikzpicture}[scale=0.7, baseline=(current bounding box.center)] % Добавлено baseline" << endl
                     << "        \\pgfplotsset{compat=1.18, width = 8cm}" << endl
                     << "        \\begin{axis}[xmin=-0.5, xmax=6.5," << endl
                     << "ymin = -3.5, ymax = 8.5," << endl
@@ -5404,9 +5404,9 @@ string Graphics(int i)
                     << "\\coordinate[label=below left:${0}$] (O) at (0,0);" << endl
                     << "\\addplot[domain=0.01:6.5,black, thick, samples=1000]{ln(x)/ln(" << a << ")};" << endl;
 
-                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "\\end{axis}" << endl << "        \\end{tikzpicture}"  << endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
              }
              return Answer;
@@ -6515,12 +6515,12 @@ string Proizvodn(int i)
                     }
                 }
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
                 if(type_1==1)
-                    cout << "        На рисунке изображен график функции $y=f(x)$. Найдите количество отмеченных точек, в которых производная функции $f(x)$ отрицательна. &" << endl;
+                    cout << "        На рисунке изображен график функции $y=f(x)$. Найдите количество отмеченных точек, в которых производная функции $f(x)$ отрицательна." << endl;
                 else
-                    cout << "        На рисунке изображен график функции $y=f(x)$. Найдите количество отмеченных точек, в которых производная функции $f(x)$ положительная. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        На рисунке изображен график функции $y=f(x)$. Найдите количество отмеченных точек, в которых производная функции $f(x)$ положительная." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << Dots[0].x / k << ",0) -- (" << fabs(Dots[8].x) / k << ",0);" << endl
                     << "            \\coordinate[label=below:${x}$] (x) at (" << fabs(Dots[8].x) / k << ",0);" << endl
@@ -6534,9 +6534,9 @@ string Proizvodn(int i)
                     cout << "       \\draw[thin, dashed, gray!50] (" << (Dots[i].x + Dots[i + 1].x) / (2*k) << ",-2) -- (" << (Dots[i].x + Dots[i + 1].x) / (2*k) << ",2);" << endl;
                     cout << "       \\coordinate[label=below left:${x_" << i+1 << "}$] (x" << i+1 << ") at (" << (Dots[i].x + Dots[i + 1].x) / (2*k) << ",0);" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -6593,12 +6593,12 @@ string Proizvodn(int i)
                     }
                 }
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
                 if (type_1 == 1)
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$. Сколько из этих точек принадлежит промежуткам убывания функции $f(x)$. &" << endl;
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$. Сколько из этих точек принадлежит промежуткам убывания функции $f(x)$." << endl;
                 else
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$. Сколько из этих точек принадлежит промежуткам возрастания функции $f(x)$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$. Сколько из этих точек принадлежит промежуткам возрастания функции $f(x)$." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << Dots[0].x / k << ",0) -- (" << fabs(Dots[8].x) / k << ",0);" << endl
                     << "            \\coordinate[label=below:${x}$] (x) at (" << fabs(Dots[8].x) / k << ",0);" << endl
@@ -6612,9 +6612,9 @@ string Proizvodn(int i)
                     cout << "       \\draw[thin, dashed, gray!50] (" << (Dots[i].x + Dots[i + 1].x) / (2 * k) << ",-2) -- (" << (Dots[i].x + Dots[i + 1].x) / (2 * k) << ",2);" << endl;
                     cout << "       \\coordinate[label=below left:${x_" << i + 1 << "}$] (x" << i + 1 << ") at (" << (Dots[i].x + Dots[i + 1].x) / (2 * k) << ",0);" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -6697,14 +6697,14 @@ string Proizvodn(int i)
                     }
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
                 if (type_1 == 1)
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек экстремума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$.  &" << endl;
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек экстремума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$." << endl;
                 if (type_1 == 2)
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек минимума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$.  &" << endl;
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек минимума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$." << endl;
                 if (type_1 == 3)
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек максимума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$.  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите количество точек максимума функции $f(x)$, принадлежащих отрезку $[" << x1 << "," << x2 << "]$." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k)-0.5 << ",-2) grid (" << (fabs(Dots[8].x) / k)+0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k)-0.5 << ",0) -- (" << (fabs(Dots[8].x) / k)+0.5 << ",0);" << endl
@@ -6729,9 +6729,9 @@ string Proizvodn(int i)
                     if ((Dots[i].y != 0) && (Dots[i + 1].y != 0))
                         cout << "       \\draw[thick] (" << Dots[i].x / k << "," << Dots[i].y/k << ") to [out=0,in=180] (" << Dots[i + 1].x / k << "," << Dots[i + 1].y/k << ");" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -6788,9 +6788,9 @@ string Proizvodn(int i)
                 } while (check != 1);
                 answer = c;
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
-                cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите точку экстремума функции $f(x)$, на отрезке $[" << x1 << "," << x2 << "]$.  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
+                cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. Найдите точку экстремума функции $f(x)$, на отрезке $[" << x1 << "," << x2 << "]$." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k) - 0.5 << ",-2) grid (" << (fabs(Dots[8].x) / k) + 0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k) - 0.5 << ",0) -- (" << (fabs(Dots[8].x) / k) + 0.5 << ",0);" << endl
@@ -6815,9 +6815,9 @@ string Proizvodn(int i)
                     if ((Dots[i].y != 0) && (Dots[i + 1].y != 0))
                         cout << "       \\draw[thick] (" << Dots[i].x / k << "," << Dots[i].y / k << ") to [out=0,in=180] (" << Dots[i + 1].x / k << "," << Dots[i + 1].y / k << ");" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -6845,9 +6845,9 @@ string Proizvodn(int i)
                     }
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
-                cout << "        На рисунке изображен график функции $y=f(x)$. Найдите корень уравнения $f'(x)=0$.  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
+                cout << "        На рисунке изображен график функции $y=f(x)$. Найдите корень уравнения $f'(x)=0$." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k) - 0.5 << ",-2) grid (" << (fabs(Dots[2].x) / k) + 0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k) - 0.5 << ",0) -- (" << (fabs(Dots[2].x) / k) + 0.5 << ",0);" << endl
@@ -6860,9 +6860,9 @@ string Proizvodn(int i)
                 cout << "           \\coordinate[label=below:$1$] (Onex) at (0.5,0);" << endl
                     << "           \\coordinate[label=left:$1$] (Oney) at (0,0.5);" << endl;
                 cout << "           \\draw[thick] (" << Dots[0].x/k << "," << Dots[0].y/k << ") -- (" << Dots[1].x/k << "," << Dots[1].y/k << ") -- (" << Dots[2].x/k << "," << Dots[2].y/k << ");" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -6962,12 +6962,12 @@ string Proizvodn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
                 if(type_1==1)
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. В какой точке отрезка $[" << x1 << "," << x2 << "]$ функция $f(x)$ принимает наибольшее значение.  &" << endl;
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. В какой точке отрезка $[" << x1 << "," << x2 << "]$ функция $f(x)$ принимает наибольшее значение." << endl;
                 else
-                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. В какой точке отрезка $[" << x1 << "," << x2 << "]$ функция $f(x)$ принимает наименьшее значение.  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        На рисунке изображен график $y=f'(x)$ -- производной функции $f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. В какой точке отрезка $[" << x1 << "," << x2 << "]$ функция $f(x)$ принимает наименьшее значение." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k) - 0.5 << ",-2) grid (" << (fabs(Dots[8].x) / k) + 0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k) - 0.5 << ",0) -- (" << (fabs(Dots[8].x) / k) + 0.5 << ",0);" << endl
@@ -6992,9 +6992,9 @@ string Proizvodn(int i)
                     if ((Dots[i].y != 0) && (Dots[i + 1].y != 0))
                         cout << "       \\draw[thick] (" << Dots[i].x / k << "," << Dots[i].y / k << ") to [out=0,in=180] (" << Dots[i + 1].x / k << "," << Dots[i + 1].y / k << ");" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -7067,12 +7067,12 @@ string Proizvodn(int i)
                     }
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
                 if (type_1 == 1)
-                    cout << "        На рисунке изображен график функции $y=f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. На оси абсцисс отмечены точки $" << x[0] << "$, $" << x[1] << "$, $" << x[2] << "$, $" << x[3] << "$. В какой из этих точек значение производной наибольшее?  &" << endl;
+                    cout << "        На рисунке изображен график функции $y=f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. На оси абсцисс отмечены точки $" << x[0] << "$, $" << x[1] << "$, $" << x[2] << "$, $" << x[3] << "$. В какой из этих точек значение производной наибольшее?" << endl;
                 else
-                    cout << "        На рисунке изображен график функции $y=f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. На оси абсцисс отмечены точки $" << x[0] << "$, $" << x[1] << "$, $" << x[2] << "$, $" << x[3] << "$. В какой из этих точек значение производной наименьшее?  &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                    cout << "        На рисунке изображен график функции $y=f(x)$, определенной на интервале $(" << Dots[0].x << "," << Dots[8].x << ")$. На оси абсцисс отмечены точки $" << x[0] << "$, $" << x[1] << "$, $" << x[2] << "$, $" << x[3] << "$. В какой из этих точек значение производной наименьшее?" << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k) - 0.5 << ",-2) grid (" << (fabs(Dots[8].x) / k) + 0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k) - 0.5 << ",0) -- (" << (fabs(Dots[8].x) / k) + 0.5 << ",0);" << endl
@@ -7102,9 +7102,9 @@ string Proizvodn(int i)
                     if ((Dots[i].y != 0) && (Dots[i + 1].y != 0))
                         cout << "       \\draw[thick] (" << Dots[i].x / k << "," << Dots[i].y / k << ") to [out=0,in=180] (" << Dots[i + 1].x / k << "," << Dots[i + 1].y / k << ");" << endl;
                 }
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:
@@ -7122,9 +7122,9 @@ string Proizvodn(int i)
                         check = 0;
                 } while (check != 1);
                 cout << "%" << i + 1 << endl;
-                cout << "\\item  \\textbf{Условие}:" << endl << "\\begin{table}[h!]" << endl << "   \\begin{tabular}{m{5cm} m{8cm}}" << endl;
-                cout << "        На рисунке изображена касательная к графику функции $y=f(x)$ в определенной точке $x_0$. Найдите производную функции в точке $x_0$. &" << endl;
-                cout << "       \\begin{center}" << endl << "            \\begin{tikzpicture}" << endl
+                cout << "\\item" << endl << "\\begin{derivative}" << endl;
+                cout << "        На рисунке изображена касательная к графику функции $y=f(x)$ в определенной точке $x_0$. Найдите производную функции в точке $x_0$." << endl;
+                cout << "   \\end{derivative}\\hfill" << endl << "   \\raisebox{-70pt}{% Подберите значение смещения" << endl << "   \\begin{tikzpicture}[scale=0.7]" << endl
                     << "            \\draw [thin, gray!50, step = 0.5] (" << (Dots[0].x / k) - 0.5 << ",-2) grid (" << (fabs(Dots[1].x) / k) + 0.5 << ", 2);" << endl
                     << "            \\draw [thick, -latex] (0,-2) -- (0,2);" << endl
                     << "            \\draw [thick, -latex] (" << (Dots[0].x / k) - 0.5 << ",0) -- (" << (fabs(Dots[1].x) / k) + 0.5 << ",0);" << endl
@@ -7134,9 +7134,9 @@ string Proizvodn(int i)
                 cout << "           \\coordinate[label=below:$1$] (Onex) at (0.5,0);" << endl
                     << "           \\coordinate[label=left:$1$] (Oney) at (0,0.5);" << endl;
                 cout << "           \\draw[thick] (" << Dots[0].x/k << "," << Dots[0].y/k << ") -- (" << Dots[1].x/k << "," << Dots[1].y/k << ");" << endl;
-                cout << "        \\end{tikzpicture}" << endl << "     \\end{center}" << endl << "      \\end{tabular}" << endl << "\\end{table}" << endl << endl << endl << endl;
+                cout << "        \\end{tikzpicture}" << endl << "     }" <<  endl << endl;
                 //cout << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
