@@ -172,13 +172,17 @@ double ZnakTrigonFunction(string name, double angle)
     return out;
 }
 
-string StepKoren()
+string StepKoren(int AllType)
 {
     double osn[3], pok[6];
 			string Answer;
 			int check = 0;
 			double answer;
-			int type = rand() % 10 + 1;
+			int type;
+            if(AllType == 0)
+                type = rand() % 10 + 1;
+            else
+                type = AllType;
 			int type_1, del;
 			switch (type)
 			{
@@ -200,7 +204,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $$\\frac{" << osn[0] << "^{" << pok[1] << "}\\cdot " << (osn[0] * osn[1]) << "^{" << pok[0] << "}}{" << osn[1] << "^{" << pok[2] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 2:
@@ -225,7 +229,7 @@ string StepKoren()
 				} while (check != 1);
 				cout << "\\item		Найдите значение выражения: $\\left(" << pow(osn[0], pok[0]) << "^{" << pok[1] << "}\\right)^{" << pok[2] << "}:\\left(" << pow(osn[0], pok[3]) << "^{" << pok[4] << "}\\right)^{" << pok[5] << "}$." << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 3:
@@ -248,7 +252,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $" << pow(osn[0], pok[0]) << "^{" << pok[2] << "}\\cdot " << osn[0] << "^{" << pok[1] << "}$." << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 4:
@@ -279,7 +283,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выраженияя: $$\\frac{" << osn[0] << "^{" << pok[2] << "}}{" << pow(osn[0],pok[0]) << "^{" << pok[1] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 5:
@@ -307,7 +311,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $$\\frac{" << osn[0] << "^{" << pok[2] << "}}{\\left(" << osn[0] << "^{" << pok[0] << "}\\right)^{" << pok[1] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 6:
@@ -343,7 +347,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $$" << pow(osn[0],2) << "^{\\frac{" << pok[2] << "}{" << pok[3] << "}}\\cdot " << osn[0] << "^{\\frac{" << pok[0] << "}{" << pok[1] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 7:
@@ -366,7 +370,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $$\\frac{" << osn[2] <<"}{\\left(" << osn[0] << "\\sqrt{" << osn[1] << "}\\right)^2}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 8:
@@ -397,7 +401,7 @@ string StepKoren()
 				else
 					cout << "\\item		Найдите значение выражения: $\\left(\\sqrt{" << osn[1] << "}+\\sqrt{" << osn[2] << "}\\right)\\sqrt{" << osn[0] << "}$." << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 9:
@@ -418,7 +422,7 @@ string StepKoren()
 				} while (check != 1);
 				cout << "\\item		Найдите значение выражения: $$\\frac{\\sqrt[" << pok[0] << "]{" << osn[0] << "}\\sqrt[" << pok[1] << "]{" << osn[0] << "}}{\\sqrt[" << pok[2] << "]{" << osn[0] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 10:
@@ -439,13 +443,13 @@ string StepKoren()
 				} while (check != 1);
 				cout << "\\item		Найдите значение выражения: $$\\frac{\\sqrt[" << pok[0] << "]{" << osn[0] << "}\\sqrt[" << pok[0] << "]{" << osn[1] << "}}{\\sqrt[" << pok[0] << "]{" << osn[2] << "}}$$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 			}
             return Answer;
 }
 
-string LogCount()
+string LogCount(int AllType)
 {
     double up[3];
 			double osn[1];
@@ -453,7 +457,11 @@ string LogCount()
 			string Answer;
 			int check = 0;
 			double answer, change;
-			int type = rand()%4+1;
+			int type;
+            if(AllType == 0)
+                type = rand()%4+1;
+            else
+                type = AllType;
 			int type_1;
 			switch (type)
 			{
@@ -482,7 +490,7 @@ string LogCount()
 				else
 					cout << "\\item		Найдите значение выражения: $\\log_{" << osn[0] << "}{" << up[0] << "}+\\log_{" << osn[0] << "}{" << up[1] << "}$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 2:
@@ -505,7 +513,7 @@ string LogCount()
 				} while (check != 1);
 				cout << "\\item		Найдите значение выражения: $\\log_{" << osn[0] << "}{" << pow(up[0], pok[0]) << "}-\\log_{" << osn[0] << "}{" << pow(up[1], pok[0]) << "}$" << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 3:
@@ -529,7 +537,7 @@ string LogCount()
 				else
 					cout << "\\item		Найдите значение выражения: $" << up[0] << "\\log_{" << up[1] << "}{\\sqrt[" << osn[0] << "]{" << up[1] << "}}$." << endl;
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 
 			case 4:
@@ -585,15 +593,19 @@ string LogCount()
 					break;
 				}
 				//cout << "\\\\" << answer << endl;
-				Answer = "  \\item " + to_string(answer) + " \n";
+				Answer = "  \\item " + FormatDouble(answer) + " \n";
 				break;
 			}
             return Answer;
 }
 
-string TrigonomCount()
+string TrigonomCount(int AllType)
 {
-                int type = rand() % 7 + 1;
+            int type;
+            if(AllType == 0)
+                type = rand() % 7 + 1;
+            else
+                type = AllType;
             int check = 0;
             TrigFunction a[3];
             double b[6];
@@ -670,7 +682,7 @@ string TrigonomCount()
                 } while (check != 1);
                 cout << "\\item     Найдите значение выражения: $$\\frac{" << NumberCelUr(b[0], 1) << "\\" << a[0].name << "(" << a[0].angel << "^{\\circ})}{\\" << a[1].name << "(" << a[1].angel << "^{\\circ})\\" << a[2].name << "(" << a[2].angel << "^{\\circ})}$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -707,7 +719,7 @@ string TrigonomCount()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -1042,7 +1054,7 @@ string TrigonomCount()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -1068,7 +1080,7 @@ string TrigonomCount()
                 if (type_1 == 3)
                     cout << "\\item     Найдите значение выражения: $" << NumberCelUr(b[0],1) << "\\sqrt{" << b[1] << "}-" << NumberCelUr((2*b[0]), 1) << "\\sqrt{" << b[1] << "}\\sin^2\\left(\\frac{" << NumberCelUr(b[2],1) << "\\pi}{" << b[3] << "}\\right)$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -1093,7 +1105,7 @@ string TrigonomCount()
 
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -1201,7 +1213,7 @@ string TrigonomCount()
 
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -1311,19 +1323,23 @@ string TrigonomCount()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             }
             return Answer;
 }
 
-string TeorFerSimpl()
+string TeorFerSimpl(int AllType)
 {
-                double answer;
+            double answer;
             double a[3];
             string Answer;
-            int type = rand()%9+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%9+1;
+            else
+                type = AllType;
             int type_1;
             int check = 0;
             switch(type)
@@ -1358,7 +1374,7 @@ string TeorFerSimpl()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -1374,7 +1390,7 @@ string TeorFerSimpl()
                 }while(check!=1);
                 cout << "\\item     На олимпиаде по математике " << a[1] << " участников разместили в четырёх аудиториях. В первых трех удалось разместить по " << a[0] << " человек, оставшихся перевели в сапасную аудиторию в другом корпусе. Найдите вероятность того, что случайно выбранный участник писал олимпиаду в запасной аудитории." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -1390,7 +1406,7 @@ string TeorFerSimpl()
                 }while(check!=1);
                 cout << "\\item     На конференцию приехали ученые из трёх стран: " << a[0] << " из Австрии, " << a[1] << " из Германии и " << a[2] << " из Сербии. Каждый из них делает на конференции один доклад. Порядок докладов определяется жеребьёвкой. Найдите вероятность того, что десятым окажется доклад ученого из Сербии." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -1399,14 +1415,14 @@ string TeorFerSimpl()
                 answer = 1 - a[0];
                 cout << "\\item     Вероятность того, что в случайный момент времени температура тела здорового человека окажется ниже чем 36,8 $^{\\circ}C$, равна " << a[0] << ". Найдите вероятность того, что в случайный момент времени у здорового человека температура окажется 36,8 $^{\\circ}C$ или выше." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
                 type_1 = rand()%2 + 1;
                 do{
                     a[0] = rand()%20 + 2;
-                    a[1] = rand()%3000 + 100;
+                    a[1] = rand()%800 + 100;
                     switch(type_1)
                     {
                     case 1:
@@ -1418,7 +1434,7 @@ string TeorFerSimpl()
                         break;
                     }
                     check = 1;
-                    if(100*answer - static_cast<int>(100*answer)!=0)
+                    if((1000*answer - static_cast<int>(1000*answer))!=0)
                         check = 0;
                 }while(check!=1);
                 switch(type_1)
@@ -1432,7 +1448,7 @@ string TeorFerSimpl()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:
@@ -1449,7 +1465,7 @@ string TeorFerSimpl()
                 }while(check!=1);
                 cout << "\\item     В чемпионате по гимнастике участвуют " << a[0] << " спортсменок: " << a[1] << " из Венгрии, " << a[2] << " из Румынии, остальные -- из Болгарии. Порядок, в котором выступают спортсменки, определяется жребием. Найдите вероятность того, что спортсменка, выступающая первой, окажется из Болгарии." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:
@@ -1484,7 +1500,7 @@ string TeorFerSimpl()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:
@@ -1519,7 +1535,7 @@ string TeorFerSimpl()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 9:
@@ -1533,7 +1549,7 @@ string TeorFerSimpl()
                 }while(check!=1);
                 cout << "\\item     В группе туристов " << a[0] << " человек. Их вертолетом доставляют в труднодоступный район, перевоза по " << a[1] << " человек за рейс. Порядок, в котором вертолет перевозит туристов, случаен. Найдите вероятность того, что турист В., полетит вторым рейсом вертолета." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
 
@@ -1541,7 +1557,7 @@ string TeorFerSimpl()
             return Answer;
 }
 
-string TeorFerDif()
+string TeorFerDif(int AllType)
 {
             string Answer;
             double a[4];
@@ -1549,7 +1565,11 @@ string TeorFerDif()
             double answer;
             double change;
             int check = 0;
-            int type = rand()%14+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%14+1;
+            else
+                type = AllType;
             int type_1;
             int patron;
             switch (type)
@@ -1574,7 +1594,7 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:     // Из районного центра в деревню
@@ -1596,7 +1616,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     Из районного центра в деревню ежедневно ходит автобус. Вероятность того, что в понедельник в автобусе окажется меньше 23 пассажиров, равна " << a[0] << ". Вероятность того, что окажется меньше 14 пассажиров, равна " << a[1] << ". Найдите вероятность того, что число пассажиров будет от 14 до 22 включительно." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:     // Футбольный матч две игры
@@ -1614,7 +1634,7 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:     // В торговом центре два автомата
@@ -1655,7 +1675,7 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:     // Патроны стрелку
@@ -1680,7 +1700,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     Стрелок в тире стреляет по мишени до тех пор, пока не поразит её. Известно, что он попадает в цель с вероятностью " << a[0] << " при каждом отдельном выстреле. Какое наименьшее количество патронов нужно дать стрелку, чтобы он поразил цель с вероятностью не меньше " << a[2] << "?" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 6:     // Фламастеры
@@ -1698,7 +1718,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     В коробке " << a[0] << " синих, " << a[1] << " красных и " << a[2] << " зелёных фломастеров. Случайным образом выбирают два фломастера. Найдите вероятность того, что окажутся выбраны один синий и один красный фломастеры." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 7:     // Игральную кость, какое-то число не выпало
@@ -1727,7 +1747,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     Игральную кость бросили два раза. Известно, что " << a[0] << " не выпало ни разу. Найдите при этом условии вероятность события <<сумма очков равна " << a[1] << ">>." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 8:     // Батарейки
@@ -1750,7 +1770,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     Автоматическая линия изготавливает батарейки. Вероятность того, что готовая батарейка неисправна, равна " << a[0] << ". Перед упаковкой каждая батарейка проходит систему контроля качества.Вероятность того, что система забракует неисправную батарейку, равна " << a[2] << ". Вероятность того, что система по ошибке забракует исправную батарейку, равна " << a[3] << ". Найдите вероятность того, что случайно выбранная изготовленная батарейка будет забракована системой контроля." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 9:     // Стрелок стреляет в мишени
@@ -1790,7 +1810,7 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 10:    // Хлеб
@@ -1807,7 +1827,7 @@ string TeorFerDif()
                 answer = a[1] + a[0] - 1;
                 cout << "\\item     При выпечке хлеба производится контрольное взвешивание свежей буханки. Известно, что вероятность того, что масса окажется меньше 810 г, равна " << a[0] << ". Вероятность того, что масса окажется больше 790 г, равна " << a[1] << ". Найдите вероятность того, что масса буханки больше 790 г, но меньше 810 г." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 11:    // Лампы
@@ -1833,7 +1853,7 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 12:    // Группу туристов
@@ -1851,7 +1871,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     В группе туристов " << a[0] << " человек.Их вертолётом доставляют в труднодоступный район, перевозя по " << a[1] << " человека за рейс.Порядок, в котором вертолёт перевозит туристов, случаен.Найдите вероятность того, что турист В., входящий в состав группы, полетит вторым рейсом вертолёта." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 13:    // Задачи на математике
@@ -1873,7 +1893,7 @@ string TeorFerDif()
                 } while (check != 1);
                 cout << "\\item     Вероятность того, что на тестировании по математике учащийся А. верно решит больше четырёх задач, равна " << a[1] << ". Вероятность того, что А. верно решит больше трёх задач, равна " << a[0] << ". Найдите вероятность того, что А. верно решит ровно 4 задачи." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 14:    // Бросают монету дважды
@@ -1896,15 +1916,19 @@ string TeorFerDif()
                     break;
                 }
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
 }
 
-string ISDUravn()
+string ISDUravn(int AllType)
 {
-    int type = rand()%4+1;
+    int type;
+    if(AllType == 0)
+        type = rand()%4+1;
+    else
+        type = AllType;
             int check = 0;
             double answer, del;
             int type_1;
@@ -1924,7 +1948,7 @@ string ISDUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\sqrt{" << SIGNUr(a[0], 1) << NumberCelUr(a[0], 1) << "x" << SIGNUr(a[1], 2) << NumberCelUr(a[1], 2) << "}=" << SIGNUr(a[2], 1) << NumberCelUr(a[2], 1) << "$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -1938,7 +1962,7 @@ string ISDUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\sqrt[3]{" << SIGNUr(a[0], 1) << NumberCelUr(a[0], 1) << "x" << SIGNUr(a[1], 2) << NumberCelUr(a[1], 2) << "}=" << SIGNUr(a[2], 1) << NumberCelUr(a[2], 1) << "$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -1971,7 +1995,7 @@ string ISDUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $(" << SIGNUr(a[0], 1) << NumberCelUr(a[0], 1) << "x" << SIGNUr(a[1], 2) << NumberCelUr(a[1], 2) << ")^3=" << SIGNUr(a[2], 1) << NumberCelUr(a[2], 1) << "$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -1991,7 +2015,7 @@ string ISDUravn()
                     } while (check != 1);
                     cout << "\\item     Найдите корень уравнения: $$" << SIGNUr(a[0], 1) << "\\frac{" << NumberCelUr(a[0], 2) << "}{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=" << a[3] << "$$" << endl;
                     //cout << "\\\\" << answer << endl;
-                    Answer = "  \\item " + to_string(answer) + " \n";
+                    Answer = "  \\item " + FormatDouble(answer) + " \n";
                     break;
 
                 case 2:
@@ -2013,7 +2037,7 @@ string ISDUravn()
                     } while (check != 1);
                     cout << "\\item     Найдите корень уравнения: $$" << SIGNUr(a[0], 1) << "\\frac{" << NumberCelUr(a[0], 2) << "}{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=" << SIGNUr(a[3], 1) << "\\frac{" << fabs(a[3]) << "}{" << a[4] << "}$$" << endl;
                     //cout << "\\\\" << answer << endl;
-                    Answer = "  \\item " + to_string(answer) + " \n";
+                    Answer = "  \\item " + FormatDouble(answer) + " \n";
                     break;
                 }
                 break;
@@ -2021,12 +2045,16 @@ string ISDUravn()
         return Answer;
 }
 
-string PokUravn()
+string PokUravn(int AllType)
 {
                 double a[4];
             string Answer;
             double answer;
-            int type = rand()%5+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%5+1;
+            else
+                type = AllType;
             int check = 0;
             switch (type)
             {
@@ -2045,7 +2073,7 @@ string PokUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $$\\left(\\frac{1}{" << a[0] << "}\\right)^{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=" << pow(a[0], a[3]) << "$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -2064,7 +2092,7 @@ string PokUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $$\\left(\\frac{1}{" << a[0] << "}\\right)^{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=" << a[0] << "^{" << NumberCelUr(a[3],1) << "x}$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -2082,7 +2110,7 @@ string PokUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $$" << a[0] << "^{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=\\frac{1}{" << pow(a[0], a[3]) << "}$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -2103,7 +2131,7 @@ string PokUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $$" << a[0] << "^{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=\\left(\\frac{1}{" << pow(a[0],a[3]) << "}\\right)^{x}$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 5:
@@ -2121,17 +2149,21 @@ string PokUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $$" << a[0] << "^{" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "}=" << pow(a[0], a[3]) << "$$" << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
 }
 
-string LogUravn()
+string LogUravn(int AllType)
 {
                 double a[4];
             double answer;
-            int type = rand()%4+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%4+1;
+            else
+                type = AllType;
             int check = 0;
             string Answer;
             switch (type)
@@ -2151,7 +2183,7 @@ string LogUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\log_{" << a[0] << "}(" << a[1] << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "x)=\\log_{" << a[0] << "}{" << a[3] << "}$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 2:
@@ -2169,7 +2201,7 @@ string LogUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\log_{" << a[0] << "}(" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << ")=\\log_{" << a[0] << "}{" << a[3] << "}$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 3:
@@ -2189,7 +2221,7 @@ string LogUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\log_{" << a[0] << "}(" << a[1] << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << "x)= " << a[3] << "$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
 
             case 4:
@@ -2209,13 +2241,13 @@ string LogUravn()
                 } while (check != 1);
                 cout << "\\item     Найдите корень уравнения: $\\log_{" << a[0] << "}(" << SIGNUr(a[1], 1) << NumberCelUr(a[1], 1) << "x" << SIGNUr(a[2], 2) << NumberCelUr(a[2], 2) << ")=" << a[3] << "$." << endl;
                 //cout << "\\\\" << answer << endl;
-                Answer = "  \\item " + to_string(answer) + " \n";
+                Answer = "  \\item " + FormatDouble(answer) + " \n";
                 break;
             }
             return Answer;
 }
 
-string Treugol(int i)
+string Treugol(int i, int AllType)
 {
     double a, b, c, max, k, chisl, znam, S, h1, h2, h;
             double alpha, betta;
@@ -2224,7 +2256,11 @@ string Treugol(int i)
             double answer;
             int nod;
             int check = 0;
-            int type_main = rand()%5 + 1;
+            int type_main;
+            if(AllType == 0)
+                type_main = rand()%5 + 1;
+            else
+                type_main = AllType;
             switch (type_main)
             {
             case 1:     // Тригонометрия
@@ -3425,9 +3461,13 @@ string Treugol(int i)
             return Answer;
 }
 
-string Mnogougol(int i)
+string Mnogougol(int i, int AllType)
 {
-    int type_main = rand()%3 + 1;
+    int type_main;
+    if(AllType == 0)
+        type_main = rand()%3 + 1;
+    else
+        type_main = AllType;
             double S, a[2], h[2], change, k, dx, dy, c, max, R, side[4], alpha[4], betta[4], l[4];
             double answer;
             int check = 0;
@@ -3674,13 +3714,17 @@ string Mnogougol(int i)
             return Answer;
 }
 
-string Okrugn(int i)
+string Okrugn(int i, int AllType)
 {
     double alpha[6];
             double betta[6], max, R, change;
             int check = 0;
             int type_1;
-            int type = rand()%10+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%10+1;
+            else
+                type = AllType;
             double answer;
             string Answer;
             switch (type)
@@ -4069,9 +4113,13 @@ string Okrugn(int i)
             return Answer;
 }
 
-string Vector(int i)
+string Vector(int i, int AllType)
 {
-    int type = rand()%5+1;
+    int type;
+    if(AllType == 0)
+        type = rand()%5+1;
+    else
+        type = AllType;
             double a[4], b[4], c[2];
             double k[2];
             double answer;
@@ -4324,9 +4372,13 @@ string Vector(int i)
             return Answer;
 }
 
-string Prizm(int i)
+string Prizm(int i, int AllType)
 {
-    int type = rand()%9+1;
+    int type;
+    if(AllType == 0)
+        type = rand()%9+1;
+    else
+        type = AllType;
             double a[3], V, S, k;
             double answer;
             string Answer;
@@ -4667,11 +4719,15 @@ string Prizm(int i)
             return Answer;
 }
 
-string Cilindr(int i)
+string Cilindr(int i, int AllType)
 {
                 double S, answer, V, k[2];
             int check = 0;
-            int type = rand()%7+1;
+            int type;
+            if(AllType == 0)
+                type = rand()%7+1;
+            else
+                type = AllType;
             int type_1;
             string Answer;
             switch (type)
@@ -13802,13 +13858,13 @@ int main()
             do {
                 cout << "\033[2J\033[1;1H";
                 cout << "Выберите темы:" << endl;
-                cout << "1. Задание 7: Вычисления и преобразования (" << count_task[0] + count_task[1] + count_task[2] + count_task[3] << ")" << endl;
-                cout << "2. Задание 4: Простая теория вероятности  (" << count_task[4] << ")" << endl;
-                cout << "3. Задание 5: Сложная теория вероятности  (" << count_task[5] << ")" << endl;
-                cout << "4. Задание 6: Уравнения  (" << count_task[6] + count_task[7] + count_task[8] + count_task[9] << ")" << endl;
-                cout << "5. Задание 1: Планиметрия (" << count_task[10] + count_task[11] + count_task[12] + count_task[13] << ")" << endl;
-                cout << "6. Задание 2: Векторы  (" << count_task[14] << ")" << endl;
-                cout << "7. Задание 3: Стереометрия  (" << count_task[15] + count_task[16] + count_task[17] << ")" << endl;
+                cout << "1. Задание 7: Вычисления и преобразования (" << count_task[0] + count_task[1] + count_task[2] + count_task[3] + count_task[58] << ")" << endl;
+                cout << "2. Задание 4: Простая теория вероятности  (" << count_task[4] + count_task[59] << ")" << endl;
+                cout << "3. Задание 5: Сложная теория вероятности  (" << count_task[5] + count_task[60] << ")" << endl;
+                cout << "4. Задание 6: Уравнения  (" << count_task[6] + count_task[7] + count_task[8] + count_task[9] + count_task[61] << ")" << endl;
+                cout << "5. Задание 1: Планиметрия (" << count_task[10] + count_task[11] + count_task[12] + count_task[13] + count_task[62] << ")" << endl;
+                cout << "6. Задание 2: Векторы  (" << count_task[14] + count_task[63] << ")" << endl;
+                cout << "7. Задание 3: Стереометрия  (" << count_task[15] + count_task[16] + count_task[17] + count_task[64] << ")" << endl;
                 cout << "8. Задание 11: Графики  (" << count_task[18] << ")" << endl;
                 cout << "9. Задание 9: Задачи с прикладным содержанием  (" << count_task[19] << ")" << endl;
                 cout << "10. Задание 10: Текстовые задачи (" << count_task[20] + count_task[21] + count_task[22] + count_task[23] << ")" << endl;
@@ -13834,8 +13890,9 @@ int main()
                         cout << "1. Степени и корни (" << count_task[0] << ")" << endl;
                         cout << "2. Логарифмы (" << count_task[1]  << ")" << endl;
                         cout << "3. Тригонометрия (" << count_task[2]  << ")" << endl;
-                        cout << "4. Все целиком (" << count_task[3] << ")" << endl << endl;
-                        cout << "0. Назад" << endl;
+                        cout << "4. Все целиком (" << count_task[3] << ")" << endl;
+                        cout << "5. Все типы этого номера (" << count_task[58] << ")" << endl;
+                        cout << endl  << "0. Назад" << endl;
                         cout << "Ваш выбор: ";
                         cin >> choice;
                         switch(choice)
@@ -13863,21 +13920,63 @@ int main()
                             cout << "Введите количество заданий: ";
                             cin >> count_task[3];
                             break;
+
+                        case 5:
+                            count_task[58] = 1;
+                            break;
                         }
                     }while(choice != 0);
                     choice = -1;
                     break;
 
                 case 2:
-                    cout << "\033[2J\033[1;1H";
-                    cout << "Введите количество заданий: ";
-                    cin >> count_task[4];
+                    do{
+                        cout << "\033[2J\033[1;1H";
+                        cout << "Выберите темы:" << endl;
+                        cout << "1. Произвольное количество (" << count_task[4] << ")" << endl;
+                        cout << "2. Все типы этого номера (" << count_task[59] << ")" << endl;
+                        cout << endl  << "0. Назад" << endl;
+                        cout << "Ваш выбор: ";
+                        cin >> choice;
+                        switch(choice)
+                        {
+                        case 1:
+                            cout << "\033[2J\033[1;1H";
+                            cout << "Введите количество заданий: ";
+                            cin >> count_task[4];
+                            break;
+
+                        case 2:
+                            count_task[59] = 1;
+                            break;
+                        }
+                    }while(choice != 0);
+                    choice = -1;
                     break;
 
                 case 3:
-                    cout << "\033[2J\033[1;1H";
-                    cout << "Введите количество заданий: ";
-                    cin >> count_task[5];
+                    do{
+                        cout << "\033[2J\033[1;1H";
+                        cout << "Выберите темы:" << endl;
+                        cout << "1. Произвольное количество (" << count_task[5] << ")" << endl;
+                        cout << "2. Все типы этого номера (" << count_task[60] << ")" << endl;
+                        cout << endl  << "0. Назад" << endl;
+                        cout << "Ваш выбор: ";
+                        cin >> choice;
+                        switch(choice)
+                        {
+                        case 1:
+                            cout << "\033[2J\033[1;1H";
+                            cout << "Введите количество заданий: ";
+                            cin >> count_task[5];
+                            break;
+
+                        case 2:
+                            count_task[60] = 1;
+                            break;
+                        }
+                    }while(choice != 0);
+                    choice = -1;
                     break;
 
                 case 4:
@@ -13887,8 +13986,9 @@ int main()
                         cout << "1. ИСД (" << count_task[6] << ")" << endl;
                         cout << "2. Показательные уравнения (" << count_task[7]  << ")" << endl;
                         cout << "3. Логарифмические уравнения (" << count_task[8]  << ")" << endl;
-                        cout << "4. Все целиком (" << count_task[9] << ")" << endl << endl;
-                        cout << "0. Назад" << endl;
+                        cout << "4. Все целиком (" << count_task[9] << ")" << endl;
+                        cout << "5. Все типы этого номера (" << count_task[61] << ")" << endl;
+                        cout << endl << "0. Назад" << endl;
                         cout << "Ваш выбор: ";
                         cin >> choice;
                         switch(choice)
@@ -13916,6 +14016,10 @@ int main()
                             cout << "Введите количество заданий: ";
                             cin >> count_task[9];
                             break;
+
+                        case 5:
+                            count_task[61] = 1;
+                            break;
                         }
                     }while(choice != 0);
                     choice = -1;
@@ -13928,8 +14032,9 @@ int main()
                         cout << "1. Треугольники (" << count_task[10] << ")" << endl;
                         cout << "2. Многоугольники (" << count_task[11]  << ")" << endl;
                         cout << "3. Окружности (" << count_task[12]  << ")" << endl;
-                        cout << "4. Все целиком (" << count_task[13] << ")" << endl << endl;
-                        cout << "0. Назад" << endl;
+                        cout << "4. Все целиком (" << count_task[13] << ")" << endl;
+                        cout << "5. Все типы этого номера (" << count_task[62] << ")" << endl;
+                        cout << endl << "0. Назад" << endl;
                         cout << "Ваш выбор: ";
                         cin >> choice;
                         switch(choice)
@@ -13957,15 +14062,38 @@ int main()
                             cout << "Введите количество заданий: ";
                             cin >> count_task[13];
                             break;
+                        
+                        case 5:
+                            count_task[62] = 1;
+                            break;
                         }
                     }while(choice != 0);
                     choice = -1;
                     break;
 
                 case 6:
-                    cout << "\033[2J\033[1;1H";
-                    cout << "Введите количество заданий: ";
-                    cin >> count_task[14];
+                    do{
+                        cout << "\033[2J\033[1;1H";
+                        cout << "Выберите темы:" << endl;
+                        cout << "1. Произвольное количество (" << count_task[14] << ")" << endl;
+                        cout << "2. Все типы этого номера (" << count_task[63] << ")" << endl;
+                        cout << endl  << "0. Назад" << endl;
+                        cout << "Ваш выбор: ";
+                        cin >> choice;
+                        switch(choice)
+                        {
+                        case 1:
+                            cout << "\033[2J\033[1;1H";
+                            cout << "Введите количество заданий: ";
+                            cin >> count_task[14];
+                            break;
+
+                        case 2:
+                            count_task[63] = 1;
+                            break;
+                        }
+                    }while(choice != 0);
+                    choice = -1;
                     break;
 
                 case 7:
@@ -13974,8 +14102,9 @@ int main()
                         cout << "Выберите темы:" << endl;
                         cout << "1. Призмы (" << count_task[15] << ")" << endl;
                         cout << "2. Цилиндры (" << count_task[16]  << ")" << endl;
-                        cout << "3. Все целиком (" << count_task[17] << ")" << endl << endl;
-                        cout << "0. Назад" << endl;
+                        cout << "3. Все целиком (" << count_task[17] << ")" << endl;
+                        cout << "4. Все типы этого номера (" << count_task[64] << ")" << endl;
+                        cout << endl << "0. Назад" << endl;
                         cout << "Ваш выбор: ";
                         cin >> choice;
                         switch(choice)
@@ -13996,6 +14125,10 @@ int main()
                             cout << "\033[2J\033[1;1H";
                             cout << "Введите количество заданий: ";
                             cin >> count_task[17];
+                            break;
+
+                        case 4:
+                            count_task[64] = 1;
                             break;
                         }
                     }while(choice != 0);
@@ -14403,7 +14536,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[0]; i++)
                         {
-                            Answers = Answers + StepKoren();
+                            Answers = Answers + StepKoren(0);
                             Count++;
                         }
                         count_task[0] = 0;
@@ -14412,7 +14545,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[1]; i++)
                         {
-                            Answers = Answers + LogCount();
+                            Answers = Answers + LogCount(0);
                             Count++;
                         }
                         count_task[1] = 0;
@@ -14421,7 +14554,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[2]; i++)
                         {
-                            Answers = Answers + TrigonomCount();
+                            Answers = Answers + TrigonomCount(0);
                             Count++;
                         }
                         count_task[2] = 0;
@@ -14434,17 +14567,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + StepKoren();
+                                Answers = Answers + StepKoren(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + LogCount();
+                                Answers = Answers + LogCount(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + TrigonomCount();
+                                Answers = Answers + TrigonomCount(0);
                                 Count++;
                                 break;
                             }
@@ -14455,7 +14588,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[4]; i++)
                         {
-                            Answers = Answers + TeorFerSimpl();
+                            Answers = Answers + TeorFerSimpl(0);
                             Count++;
                         }
                         count_task[4] = 0;
@@ -14464,7 +14597,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[5]; i++)
                         {
-                            Answers = Answers + TeorFerDif();
+                            Answers = Answers + TeorFerDif(0);
                             Count++;
                         }
                         count_task[5] = 0;
@@ -14473,7 +14606,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[6]; i++)
                         {
-                            Answers = Answers + ISDUravn();
+                            Answers = Answers + ISDUravn(0);
                             Count++;
                         }
                         count_task[6] = 0;
@@ -14482,7 +14615,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[7]; i++)
                         {
-                            Answers = Answers + PokUravn();
+                            Answers = Answers + PokUravn(0);
                             Count++;
                         }
                         count_task[7] = 0;
@@ -14491,7 +14624,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[8]; i++)
                         {
-                            Answers = Answers + LogUravn();
+                            Answers = Answers + LogUravn(0);
                             Count++;
                         }
                         count_task[8] = 0;
@@ -14504,17 +14637,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + ISDUravn();
+                                Answers = Answers + ISDUravn(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + PokUravn();
+                                Answers = Answers + PokUravn(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + LogUravn();
+                                Answers = Answers + LogUravn(0);
                                 Count++;
                                 break;
                             }
@@ -14525,7 +14658,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[10]; i++)
                         {
-                            Answers = Answers + Treugol(Count);
+                            Answers = Answers + Treugol(Count, 0);
                             Count++;
                         }
                         count_task[10] = 0;
@@ -14534,7 +14667,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[11]; i++)
                         {
-                            Answers = Answers + Mnogougol(Count);
+                            Answers = Answers + Mnogougol(Count, 0);
                             Count++;
                         }
                         count_task[11] = 0;
@@ -14543,7 +14676,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[12]; i++)
                         {
-                            Answers = Answers + Okrugn(Count);
+                            Answers = Answers + Okrugn(Count, 0);
                             Count++;
                         }
                         count_task[12] = 0;
@@ -14556,17 +14689,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Treugol(Count);
+                                Answers = Answers + Treugol(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Mnogougol(Count);
+                                Answers = Answers + Mnogougol(Count, 0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + Okrugn(Count);
+                                Answers = Answers + Okrugn(Count, 0);
                                 Count++;
                                 break;
                             }
@@ -14577,7 +14710,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[14]; i++)
                         {
-                            Answers = Answers + Vector(Count);
+                            Answers = Answers + Vector(Count, 0);
                             Count++;
                         }
                         count_task[14] = 0;
@@ -14586,7 +14719,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[15]; i++)
                         {
-                            Answers = Answers + Prizm(Count);
+                            Answers = Answers + Prizm(Count, 0);
                             Count++;
                         }
                         count_task[15] = 0;
@@ -14595,7 +14728,7 @@ int main()
                     {
                         for (int i = 0; i < count_task[16]; i++)
                         {
-                            Answers = Answers + Cilindr(Count);
+                            Answers = Answers + Cilindr(Count, 0);
                             Count++;
                         }
                         count_task[16] = 0;
@@ -14608,12 +14741,12 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Prizm(Count);
+                                Answers = Answers + Prizm(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Cilindr(Count);
+                                Answers = Answers + Cilindr(Count, 0);
                                 Count++;
                                 break;
                             }
@@ -15024,6 +15157,73 @@ int main()
                         }
                         count_task[57] = 0;
                     }
+                    if(count_task[58] != 0)
+                    {
+                        for(int i = 1; i <= 10; i++)
+                            Answers = Answers + StepKoren(i);
+                        for(int i = 1; i <= 4; i++)
+                            Answers = Answers + LogCount(i);
+                        for(int i = 1; i <= 7; i++)
+                            Answers = Answers + TrigonomCount(i);
+                    }
+                    if(count_task[59] != 0)
+                    {
+                        for(int i = 1; i <= 9; i++)
+                            Answers = Answers + TeorFerSimpl(i);
+                    }
+                    if(count_task[60] != 0)
+                    {
+                        for(int i = 1; i <= 14; i++)
+                            Answers = Answers + TeorFerDif(i);
+                    }
+                    if(count_task[61] != 0)
+                    {
+                        for(int i = 1; i <= 4; i++)
+                            Answers = Answers + ISDUravn(i);
+                        for(int i = 1; i <= 5; i++)
+                            Answers = Answers + PokUravn(i);
+                        for(int i = 1; i <= 4; i++)
+                            Answers = Answers + LogUravn(i);
+                    }
+                    if(count_task[62] != 0)
+                    {
+                        for(int i = 1; i <= 5; i++)
+                        {
+                            Answers = Answers + Treugol(Count, i);
+                            Count++;
+                        }
+                        for(int i = 1; i <= 3; i++)
+                        {
+                            Answers = Answers + Mnogougol(Count, i);
+                            Count++;
+                        }
+                        for(int i = 1; i <= 10; i++)
+                        {
+                            Answers = Answers + Okrugn(Count, i);
+                            Count++;
+                        }
+                    }
+                    if(count_task[63] != 0)
+                    {
+                        for(int i = 1; i <= 5; i++)
+                        {
+                            Answers = Answers + Vector(Count, i);
+                            Count++;
+                        }
+                    }
+                    if(count_task[64] != 0)
+                    {
+                        for(int i = 1; i <= 9; i++)
+                        {
+                            Answers = Answers + Prizm(Count, i);
+                            Count++;
+                        }
+                        for(int i = 1; i <= 7; i++)
+                        {
+                            Answers = Answers + Cilindr(Count, i);
+                            Count++;
+                        }
+                    }
                     cout << "}" << endl << "\\end{enumerate}" << endl << "\\newpage \n {\\centering \\subsubsection*{Ответы}} \n \\begin{enumerate} \n" << Answers << endl << "\\end{enumerate}" << endl << endl;
                     Answers = "";
                     cout << "0. Назад" << endl;
@@ -15046,24 +15246,24 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Treugol(Count);
+                                Answers = Answers + Treugol(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Mnogougol(Count);
+                                Answers = Answers + Mnogougol(Count, 0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + Okrugn(Count);
+                                Answers = Answers + Okrugn(Count, 0);
                                 Count++;
                                 break;
                             }
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + Vector(Count);
+                            Answers = Answers + Vector(Count, 0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
@@ -15072,24 +15272,24 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Prizm(Count);
+                                Answers = Answers + Prizm(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Cilindr(Count);
+                                Answers = Answers + Cilindr(Count, 0);
                                 Count++;
                                 break;
                             }
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + TeorFerSimpl();
+                            Answers = Answers + TeorFerSimpl(0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + TeorFerDif();
+                            Answers = Answers + TeorFerDif(0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
@@ -15098,17 +15298,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + ISDUravn();
+                                Answers = Answers + ISDUravn(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + PokUravn();
+                                Answers = Answers + PokUravn(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + LogUravn();
+                                Answers = Answers + LogUravn(0);
                                 Count++;
                                 break;
                             }
@@ -15119,17 +15319,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + StepKoren();
+                                Answers = Answers + StepKoren(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + LogCount();
+                                Answers = Answers + LogCount(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + TrigonomCount();
+                                Answers = Answers + TrigonomCount(0);
                                 Count++;
                                 break;
                             }
@@ -15214,24 +15414,24 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Treugol(Count);
+                                Answers = Answers + Treugol(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Mnogougol(Count);
+                                Answers = Answers + Mnogougol(Count, 0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + Okrugn(Count);
+                                Answers = Answers + Okrugn(Count, 0);
                                 Count++;
                                 break;
                             }
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + Vector(Count);
+                            Answers = Answers + Vector(Count, 0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
@@ -15240,24 +15440,24 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + Prizm(Count);
+                                Answers = Answers + Prizm(Count, 0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + Cilindr(Count);
+                                Answers = Answers + Cilindr(Count, 0);
                                 Count++;
                                 break;
                             }
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + TeorFerSimpl();
+                            Answers = Answers + TeorFerSimpl(0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
                         {
-                            Answers = Answers + TeorFerDif();
+                            Answers = Answers + TeorFerDif(0);
                             Count++;
                         }
             for (int i = 0; i < 1; i++)
@@ -15266,17 +15466,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + ISDUravn();
+                                Answers = Answers + ISDUravn(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + PokUravn();
+                                Answers = Answers + PokUravn(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + LogUravn();
+                                Answers = Answers + LogUravn(0);
                                 Count++;
                                 break;
                             }
@@ -15287,17 +15487,17 @@ int main()
                             switch(z)
                             {
                             case 1:
-                                Answers = Answers + StepKoren();
+                                Answers = Answers + StepKoren(0);
                                 Count++;
                                 break;
 
                             case 2:
-                                Answers = Answers + LogCount();
+                                Answers = Answers + LogCount(0);
                                 Count++;
                                 break;
 
                             case 3:
-                                Answers = Answers + TrigonomCount();
+                                Answers = Answers + TrigonomCount(0);
                                 Count++;
                                 break;
                             }
