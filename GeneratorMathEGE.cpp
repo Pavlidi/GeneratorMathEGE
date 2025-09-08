@@ -8916,7 +8916,7 @@ string Nerav3(int Type)
 
             case 2:
             cout << "\\item     Решите неравенство:" << endl <<
-            "       $$\\log_16(x+5)+\\log_{(x^2+10x+25)}2\\geq\\frac{3}{4}$$" << endl;
+            "       $$\\log_{16}(x+5)+\\log_{(x^2+10x+25)}2\\geq\\frac{3}{4}$$" << endl;
         Answer = Answer + "  \\item $(-4;-3]\\cup[-1;+\\infty)$ \n";
             break;
 
